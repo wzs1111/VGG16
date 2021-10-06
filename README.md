@@ -1,32 +1,20 @@
 # VGG16
-## VGG16介绍
+## VGG介绍
 ## 运行环境
-Keras-Applications	1.0.8	
+Python 3.7  
 
-Keras-Preprocessing	1.1.2
-Markdown	3.3.4	
-Werkzeug	2.0.1	
-absl-py	0.13.0	
-astor	0.8.1	
-cached-property	1.5.2
-gast	0.5.2	
-google-pasta	0.2.0	
-grpcio	1.40.0	
-h5py	3.4.0	
-importlib-metadata	4.8.1	
-numpy	1.16.2	
-pip	21.1.2	
-protobuf	3.18.0	
-setuptools	57.0.0	
-six	1.16.0	
-tensorboard	1.14.0	
-tensorflow	1.14.0	
-tensorflow-estimator	1.14.0	
-termcolor	1.1.0	
-typing-extensions	3.10.0.2	
-wheel	0.36.2	
-wrapt	1.12.1	
-zipp	3.5.0	
-##
+numpy	1.16.2  
+
+tensorflow	1.14.0  
+
+### 
 ## 超参数介绍
+### 学习率（learning rate或作lr）
+是指在优化算法中更新网络权重的幅度大小。学习率可以是恒定的、逐渐降低的，基于动量的或者是自适应的。不同的优化算法决定不同的学习率。当学习率过大则可能导致模型不收敛，损失loss不断上下震荡；学习率过小则导致模型收敛速度偏慢，需要更长的时间训练。通常lr取值为[0.01,0.001,0.0001]
+### 批次大小batch_size
+
+批次大小是每一次训练神经网络送入模型的样本数，在卷积神经网络中，大批次通常可使网络更快收敛，但由于内存资源的限制，批次过大可能会导致内存不够用或程序内核崩溃。bath_size通常取值为[16,32,64,128]
+### 迭代次数
+
+迭代次数是指整个训练集输入到神经网络进行训练的次数，当测试错误率和训练错误率相差较小时，可认为当前迭代次数合适；当测试错误率先变小后变大时则说明迭代次数过大了，需要减小迭代次数，否则容易出现过拟合。
 ## 结果
