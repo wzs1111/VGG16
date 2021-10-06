@@ -1,1 +1,32 @@
 # VGG16
+## VGG16介绍
+## 运行环境
+Keras-Applications	1.0.8	
+
+Keras-Preprocessing	1.1.2
+Markdown	3.3.4	
+Werkzeug	2.0.1	
+absl-py	0.13.0	
+astor	0.8.1	
+cached-property	1.5.2
+gast	0.5.2	
+google-pasta	0.2.0	
+grpcio	1.40.0	
+h5py	3.4.0	
+importlib-metadata	4.8.1	
+numpy	1.16.2	
+pip	21.1.2	
+protobuf	3.18.0	
+setuptools	57.0.0	
+six	1.16.0	
+tensorboard	1.14.0	
+tensorflow	1.14.0	
+tensorflow-estimator	1.14.0	
+termcolor	1.1.0	
+typing-extensions	3.10.0.2	
+wheel	0.36.2	
+wrapt	1.12.1	
+zipp	3.5.0	
+##
+## 超参数介绍
+## 结果
