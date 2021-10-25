@@ -41,3 +41,37 @@ tensorflow	1.14.0
       <td>74.47%</td>
    </tr>
 </table>
+
+<table>
+   <tr>
+      <td>迭代次数</td>
+      <td>500    </td>
+      <td>   1000</td>
+      <td>5000</td>
+      <td>10000</td>
+      <td>20000</td>
+   </tr>
+   <tr>
+      <td>准确度/%</td>
+      <td>61.32%</td>
+      <td>75.29%</td>
+      <td>82.69%</td>
+      <td>85.68</td>
+      <td>86.07</td>
+   </tr>
+</table>
+
+<table>
+   <tr>
+      <td>批次大小</td>
+      <td>16    </td>
+      <td>   32</td>
+      <td> 64</td>
+   </tr>
+   <tr>
+      <td>准确度/%</td>
+      <td>82.24%</td>
+      <td>82.69%</td>
+      <td>81.2500%</td>
+   </tr>
+</table>
