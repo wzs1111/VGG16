@@ -1,5 +1,3 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 
 import os
 import os.path
@@ -116,7 +114,7 @@ def evaluate():
                                            shuffle=False)
 
         logits = VGG.VGG16N(images, N_CLASSES, IS_PRETRAIN)  # shape of logits: [Batch_size, n_classes]
-        correct = tools.num_correct_prediction(logits, labels)  # 得到准确率，类型是浮点型
+        correct = tools.num_correct_prediction(logits, labels) 
         saver = tf.train.Saver(tf.global_variables())
         
         with tf.Session() as sess:
@@ -127,23 +125,19 @@ def evaluate():
                 global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
                 saver.restore(sess, ckpt.model_checkpoint_path)
                 print('Loading success, global_step is %s' % global_step)
-            else:
-                print('No checkpoint file found')
-                return
+
         
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=sess, coord=coord)
             
             try:
-                print('\nEvaluating......')
-                # math.floor()返回小于或等于一个给定数字的最大整数
                 num_step = int(math.floor(n_test / BATCH_SIZE))  # num_step = 312
                 num_sample = num_step*BATCH_SIZE   # num_sample=9984
                 step = 0
                 total_correct = 0
                 while step < num_step and not coord.should_stop():
-                    batch_correct = sess.run(correct)    # 得到在一个batch中正确的个数
-                    total_correct += np.sum(batch_correct)  # 得到总共的正确数量
+                    batch_correct = sess.run(correct)    
+                    total_correct += np.sum(batch_correct) 
                     step += 1
                 print('Total testing samples: %d' % num_sample)
                 print('Total correct predictions: %d' % total_correct)
